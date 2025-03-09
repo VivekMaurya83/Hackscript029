@@ -1,0 +1,13 @@
+streamlit
+sounddevice
+soundfile
+SpeechRecognition
+pandas
+scikit-learn
+pydub
+python-Levenshtein
+textblob
+better-profanity
+autocorrect
+mysql-connector-python
+matplotlib

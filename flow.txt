@@ -1,0 +1,8 @@
+flask-app/
+│
+├── app.py
+├── templates/
+│   └── index.html
+├── static/
+│   └── styles.css
+└── asus_faq_with_categories.csv
