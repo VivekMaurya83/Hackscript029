@@ -11,3 +11,4 @@ better-profanity
 autocorrect
 mysql-connector-python
 matplotlib
+PortAudio
