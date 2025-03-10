@@ -37,25 +37,27 @@ QA-BOT is a real-time analytical tool designed to evaluate the performance of vo
 
 ## **Repository Specification**  
 
-###  **Database Schema**  
+### **Database Schema**  
 
-To set up the database, run the following SQL commands:  
+To set up the database, execute the following SQL commands:
 
-
+```sql
+-- Create the database
 CREATE DATABASE qa1;
 USE qa1;
 
+-- Create table to store conversation metrics
 CREATE TABLE conversation_metrics1 (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id VARCHAR(255),
-    accuracy FLOAT,
-    timestamp DATETIME
-);  
+    user_id VARCHAR(255) NOT NULL,
+    accuracy FLOAT NOT NULL,
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+```
 
-
-### **Admin Panel **  
-
+### **Admin Panel**  
 
 Admin name: admin 
+
 Password: admin123
 
