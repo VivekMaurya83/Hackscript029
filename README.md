@@ -32,3 +32,30 @@ QA-BOT is a real-time analytical tool designed to evaluate the performance of vo
 ### Output:
 - **Performance scores and insights** for each voice agent.  
 - **Alerts for critical issues** (e.g., negative comments, long pauses). 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## **Repository Specification**  
+
+###  **Database Schema**  
+
+To set up the database, run the following SQL commands:  
+
+
+CREATE DATABASE qa1;
+USE qa1;
+
+CREATE TABLE conversation_metrics1 (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id VARCHAR(255),
+    accuracy FLOAT,
+    timestamp DATETIME
+);  
+
+
+### **Admin Panel **  
+
+
+Admin name: admin 
+Password: admin123
+
