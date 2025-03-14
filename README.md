@@ -46,13 +46,25 @@ To set up the database, execute the following SQL commands:
 CREATE DATABASE qa1;
 USE qa1;
 
+
+
 -- Create table to store conversation metrics
 CREATE TABLE conversation_metrics1 (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id VARCHAR(255) NOT NULL,
     accuracy FLOAT NOT NULL,
-    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+    timestamp DATETIME
 );
+desc conversation_metrics1;
+ALTER TABLE conversation_metrics1 ADD COLUMN feedback TEXT;
+ALTER TABLE conversation_metrics1 MODIFY COLUMN timestamp DATETIME DEFAULT CURRENT_TIMESTAMP;
+
+ALTER TABLE conversation_metrics1
+ADD COLUMN user_query TEXT,
+ADD COLUMN system_response TEXT;
+ALTER TABLE conversation_metrics1 ADD COLUMN recommendations TEXT;
+
+SELECT * FROM conversation_metrics1 WHERE system_response IS NULL;
 ```
 
 ### **Admin Panel**  
